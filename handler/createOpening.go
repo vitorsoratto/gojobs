@@ -7,7 +7,16 @@ import (
 	"github.com/vitorsoratto/gojobs/schemas"
 )
 
-func CrateOpeningHandler(ctx *gin.Context) {
+// @BasePath /api
+// @Summary Create opening
+// @Accept json
+// @Produce json
+// @Param opening body CreateOpeningRequest true "opening"
+// @Success 201 {object} CreateOpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 500 {object} ErrorResponse
+// @Router /opening [post]
+func CreateOpeningHandler(ctx *gin.Context) {
 	req := CreateOpeningRequest{}
 
 	ctx.BindJSON(&req)

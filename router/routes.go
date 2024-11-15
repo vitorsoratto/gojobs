@@ -17,7 +17,7 @@ func initRoutes(router *gin.Engine) {
 	{
 		api.GET("/openings", handler.ListOpeningsHandler)
 		api.GET("/opening", handler.GetOpeningHandler)
-		api.POST("/opening", handler.CrateOpeningHandler)
+		api.POST("/opening", handler.CreateOpeningHandler)
 		api.PUT("/opening", handler.UpdateOpeningHandler)
 		api.DELETE("/opening", handler.DeleteOpeningHandler)
 	}
